@@ -20,6 +20,7 @@ steps:
   inputs:
     command: test
     testRunTitle: 'Unit Test'
+    feedsToUse: 'select'
     projects: '**/*Test/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
@@ -27,5 +28,6 @@ steps:
   inputs:
     command: test
     testRunTitle: 'Integration Test'
+    feedsToUse: 'select'
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
