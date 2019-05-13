@@ -16,14 +16,16 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- task: UnitTest@2  
+- task: DotNetCoreCLI@2  
   inputs:
     command: test
+    testRunTitle: 'Unit Test'
     projects: '**/*Test/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2  
   inputs:
     command: test
+    testRunTitle: 'Integration Test'
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
