@@ -19,15 +19,11 @@ steps:
 - task: DotNetCoreCLI@2  
   inputs:
     command: test
-    testRunTitle: 'Unit Test'
-    feedsToUse: 'select'
     projects: '**/*Test/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2  
   inputs:
     command: test
-    testRunTitle: 'Integration Test'
-    feedsToUse: 'select'
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
