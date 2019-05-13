@@ -26,4 +26,8 @@ steps:
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
+<<<<<<< HEAD
     arguments: '--configuration $(buildConfiguration)'
+=======
+    arguments: '--configuration $(buildConfiguration)'
+>>>>>>> 8db9e485d9064baaa764c741f0fd0a3e13e1cde0
